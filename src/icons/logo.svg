@@ -1,0 +1,13 @@
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 200 200"
+    width="200"
+    height="200"
+>
+    <text x="50%" y="65%" text-anchor="middle" dominant-baseline="middle" font-family="Roboto, sans-serif" font-size="100" fill="#4b5c8a">
+        G
+    </text>
+    <text x="50%" y="35%" text-anchor="middle" dominant-baseline="middle" font-family="Roboto, sans-serif" font-size="108" fill="#1a2a5b">
+        S
+    </text>
+</svg>
