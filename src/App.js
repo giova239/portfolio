@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <div className="container my-5">
+      <div className="bg-light py-5">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

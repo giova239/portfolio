@@ -1,30 +1,29 @@
 // Import Bootstrap functions and variables first
 @import "node_modules/bootstrap/scss/functions";
 @import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/mixins"; // Import mixins for additional functionality
 
-// Custom dark color palette
-$custom-colors: (
-  "primary": #1a2a5b, // Dark blue for primary color
-  "secondary": #2b2f3a, // Dark gray for secondary color
-  "tertiary": #4b5c8a, // Accent dark blue
-  "background": #121212, // Dark background
-  "text": #e0e0e0 // Light gray text for contrast
+// Custom color palette
+$white: #ffffff;
+$theme-colors: (
+    "light":      #1f1f1f,
+    "dark":       #07090d,
+    "primary":    #1b4767,
+    "secondary":  #447493,
+    "info":       #26afcc,
+    "accent1":    #30ce93,
+    "accent2":    #168b7f,
+    "accent3":    #9ec5c5,
+    "success":    #0fb564,
+    "warning":    #eacf0e,
+    "danger":     #fd0508,
+    "text":       #ffffff,
 );
-
-// Merge custom colors with Bootstrap's default theme colors
-$theme-colors: map-merge((
-  "success": #198754,
-  "info": #4682b4,
-  "warning": #ffa500,
-  "danger": #dc3545,
-  "light": #343a40,
-  "dark": map-get($custom-colors, "background"),
-), $custom-colors);
+// Merge custom theme colors with Bootstrap's default colors
+$theme-colors: map-merge($theme-colors, $theme-colors);
 
 // Override Bootstrap's background and text colors for dark mode
-$body-bg: map-get($custom-colors, "background");
-$body-color: map-get($custom-colors, "text");
+$body-bg: map-get($theme-colors, "primary");
+$body-color: map-get($theme-colors, "text");
 
 // Import remaining Bootstrap SCSS files to apply customizations
 @import "node_modules/bootstrap/scss/bootstrap";
