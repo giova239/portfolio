@@ -29,7 +29,7 @@ function UIKit() {
   const handleShow = () => setShowModal(true);
 
   return (
-    <div className="container my-5">
+    <div className="m-5">
       <h1 className="text-primary">UI Kit</h1>
       <hr />
 
@@ -48,14 +48,14 @@ function UIKit() {
 
       {spacerValues.map(({ className, multiplier, pixels }) => (
         <div className="mb-2 row" key={className}>
-          <div className="col col-4 d-flex align-items-center">
+          <div className="col d-flex align-items-center">
             <code className="m-0">{`.${className}`}</code>
             <span className="mx-2">→</span>
             <span>${`spacer * ${multiplier}`}</span>
             <span className="mx-2">→</span>
             <span>{pixels}</span>
           </div>
-          <div className="col col-3 d-flex align-items-center justify-content-center">
+          <div className="col d-flex align-items-center justify-content-center">
             <span className={`bg-primary w-100 ${className}`}></span>
           </div>
         </div>
@@ -107,8 +107,8 @@ function UIKit() {
 
       {/* Cards Section */}
       <h3 className="mt-4">Cards</h3>
-      {['primary', 'secondary', 'success', 'danger', 'warning'].map((variant) => (
-        <Card key={variant} className="mb-3" bg={variant === 'light' ? 'light' : 'dark'} text={variant === 'light' ? 'dark' : 'light'}>
+      {COLORS.map((variant) => (
+        <Card key={variant} className="mb-3" bg={variant}>
           <Card.Header>Card Header</Card.Header>
           <Card.Body>
             <Card.Title>Card Title</Card.Title>
