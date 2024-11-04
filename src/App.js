@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div className="d-flex flex-column min-vh-100">
         <Header />
-        <main className="flex-grow-1 bg-light pt-13 p-5">
+        <main className="flex-grow-1 bg-light pt-14 p-5">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />

@@ -10,26 +10,29 @@ import profilepic from "../../../icons/profilepic.png";
 
 function Header() {
   return (
-    <Navbar expand="md" bg="primary" variant="dark" fixed="top" className="p-3">
-      <Container>
-        <Navbar.Brand as={Link} to="/" className="d-flex align-items-center">
+    <Navbar expand="md" bg="dark" variant="dark" fixed="top" className="p-3">
+      <Container className="d-flex justify-content-between align-items-center">
+        <div className="d-flex flex-grow align-items-center">
           <Image
             src={profilepic}
             alt="Profile"
             roundedCircle
-            width="50"
-            height="50"
+            width="80"
+            height="80"
             className="me-2"
           />
-          Stevanato Giovanni
-          <Image
-            src={logo}
-            alt="Logo"
-            width="40"
-            height="40"
-            className="ms-3"
-          />
-        </Navbar.Brand>
+          <div className="ms-2">
+            <h1 className="fs-26 mb-0">
+              <span className="text-accent1 me-2">Stevanato</span>
+              <span className="text-accent2">Giovanni</span>
+            </h1>
+            <h2 className="fs-14 text-accent3">Portfolio</h2>
+          </div>
+        </div>
+
+        <div className="flex-grow-1 d-flex justify-content-end">
+          <Image src={logo} alt="Logo" width="70" height="70" />
+        </div>
 
         <Navbar.Toggle aria-controls="offcanvasNavbar-md" />
 

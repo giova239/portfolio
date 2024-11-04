@@ -1,0 +1,11 @@
+// Mixin to generate font size utility classes from 1px to 64px
+@mixin font-size-utilities($min, $max) {
+  @for $size from $min through $max {
+    .fs-#{$size} {
+      font-size: #{$size}px !important;
+    }
+  }
+}
+
+// Use the mixin with a range of 1 to 64
+@include font-size-utilities(1, 64);
