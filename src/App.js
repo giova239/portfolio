@@ -10,17 +10,19 @@ import Uikit from './components/pages/uikit/uikit';
 function App() {
   return (
     <Router>
-      <Header />
-      <div className="bg-light py-5">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/uikit" element={<Uikit />} />
-        </Routes>
+      <div className="d-flex flex-column min-vh-100">
+        <Header />
+        <main className="flex-grow-1 bg-light pt-13 p-5">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/uikit" element={<Uikit />} />
+          </Routes>
+        </main>
+        <Footer />
       </div>
-      <Footer />
     </Router>
   );
 }
