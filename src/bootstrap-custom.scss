@@ -3,27 +3,50 @@
 @import "node_modules/bootstrap/scss/variables";
 
 // Custom color palette
-$white: #ffffff;
 $theme-colors: (
     "light":      #1f1f1f,
     "dark":       #07090d,
     "primary":    #1b4767,
     "secondary":  #447493,
     "info":       #26afcc,
-    "accent1":    #30ce93,
-    "accent2":    #168b7f,
-    "accent3":    #9ec5c5,
+    "accent1":    #1A2A5B,
+    "accent2":    #4B5C8A,
+    "accent3":    #168b7f,
     "success":    #0fb564,
     "warning":    #eacf0e,
     "danger":     #fd0508,
-    "text":       #ffffff,
+    "text":       #dbeaea,
 );
 // Merge custom theme colors with Bootstrap's default colors
 $theme-colors: map-merge($theme-colors, $theme-colors);
 
-// Override Bootstrap's background and text colors for dark mode
+// Other colors overrides
 $body-bg: map-get($theme-colors, "primary");
 $body-color: map-get($theme-colors, "text");
+
+// Custom Spacing
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: ($spacer * .25),   // 4px
+    2: ($spacer * .5),    // 8px
+    3: ($spacer * .75),   // 12px
+    4: ($spacer * 1),     // 16px
+    5: ($spacer * 1.5),   // 24px
+    6: ($spacer * 2),     // 32px
+    7: ($spacer * 2.5),   // 40px
+    8: ($spacer * 3),     // 48px
+    9: ($spacer * 3.5),   // 56px
+    10: ($spacer * 4),    // 64px
+    11: ($spacer * 4.5),  // 72px
+    12: ($spacer * 5),    // 80px
+    13: ($spacer * 6),    // 96px
+    14: ($spacer * 7.5),  // 120px
+);
+// Merge custom spacers with Bootstrap's default ones
+$spacers: map-merge($spacers, $spacers);
+
+@debug $spacers;
 
 // Import remaining Bootstrap SCSS files to apply customizations
 @import "node_modules/bootstrap/scss/bootstrap";
