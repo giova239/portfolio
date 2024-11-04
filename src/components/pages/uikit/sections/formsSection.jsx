@@ -7,44 +7,57 @@ function FormsSection() {
       <h3 className="mt-4">Forms</h3>
       <Form>
         {/* Email Input */}
-        <Form.Group controlId="formEmail">
-          <Form.Label>Email Input example</Form.Label>
-          <Form.Control type="email" placeholder="name@example.com" />
+        <Form.Group controlId="formEmail" className="mt-3">
+          <Form.Floating>
+            <Form.Control type="email" placeholder=" " required />
+            <Form.Label>Email</Form.Label>
+          </Form.Floating>
         </Form.Group>
 
         {/* Password Input */}
         <Form.Group controlId="formPassword" className="mt-3">
-          <Form.Label>Password Input example</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Floating>
+            <Form.Control type="password" placeholder=" " required />
+            <Form.Label>Password</Form.Label>
+          </Form.Floating>
         </Form.Group>
 
         {/* Textarea */}
         <Form.Group controlId="formTextarea" className="mt-3">
-          <Form.Label>Example textarea</Form.Label>
-          <Form.Control as="textarea" rows={3} />
+          <Form.Floating>
+            <Form.Control
+              as="textarea"
+              style={{ height: "100px" }}
+              placeholder=" "
+              required
+            />
+            <Form.Label>Textarea</Form.Label>
+          </Form.Floating>
         </Form.Group>
 
         {/* Select Input */}
         <Form.Group controlId="formSelect" className="mt-3">
-          <Form.Label>Select Example</Form.Label>
-          <Form.Select>
-            <option>Select an option...</option>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </Form.Select>
+          <Form.Floating>
+            <Form.Select required>
+              <option value="">...</option>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </Form.Select>
+            <Form.Label>Select</Form.Label>
+          </Form.Floating>
         </Form.Group>
 
         {/* File Input */}
         <Form.Group controlId="formFile" className="mt-3">
           <Form.Label>File input</Form.Label>
-          <Form.Control type="file" />
+          <Form.Control type="file" required />
         </Form.Group>
 
         {/* Checkboxes */}
         <Form.Group controlId="formCheckbox" className="mt-3">
           <Form.Label>Checkbox Example:</Form.Label>
-          <Form.Check type="checkbox" label="Checbox 1" />
+          <Form.Check type="checkbox" label="Checkbox 1" />
           <Form.Check type="checkbox" label="Checkbox 2" />
           <Form.Check type="checkbox" label="Checkbox 3" />
         </Form.Group>
