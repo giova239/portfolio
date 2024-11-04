@@ -1,0 +1,37 @@
+// custom styles for form controls and selects
+.form-control,
+.form-select {
+  border: none;
+  border-bottom: 1px solid map-get($theme-colors, "text");
+  border-radius: unset;
+  background-color: unset;
+
+  &:focus {
+    background-color: unset;
+    border-bottom-color: $primary !important;
+    box-shadow: none !important;
+  }
+
+  & ~ label {
+    color: map-get($theme-colors, "text") !important;
+    &::after {
+      background-color: unset !important;
+    }
+  }
+}
+
+// Custom styles for the file input
+.custom-file-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid map-get($theme-colors, "text");
+
+  .file-input {
+    display: none;
+    &-label {
+      flex-grow: 1;
+      padding: $spacer;
+      cursor: pointer !important;
+    }
+  }
+}

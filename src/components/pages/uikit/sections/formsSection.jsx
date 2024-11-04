@@ -74,11 +74,13 @@ function FormsSection() {
 
         {/* File Input */}
         <Form.Group controlId="formFile" className="mt-3">
-          <Form.Label>File input</Form.Label>
-          <Form.Control type="file" required />
-          <Form.Control.Feedback type="invalid">
-            Please upload a file.
-          </Form.Control.Feedback>
+          <Form.Label>File Input</Form.Label>
+          <div className="custom-file-input">
+            <input type="file" id="fileInput" className="file-input" required />
+            <label htmlFor="fileInput" className="file-input-label">
+              Choose a file...
+            </label>
+          </div>
         </Form.Group>
 
         {/* Checkboxes */}
