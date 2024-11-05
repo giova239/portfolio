@@ -2,9 +2,22 @@
   position: relative;
   height: 100vh;
   margin: 0 (-$spacer * 2) ($spacer);
-  background-image: url("../../../icons/coding.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../icons/coding.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    animation: header-image-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+  }
+
   .logo-container {
     padding-top: 35vh;
     position: sticky;
@@ -58,7 +71,7 @@
   align-items: center;
   gap: $spacer * 2;
   justify-content: space-evenly;
-  margin-bottom: $spacer * 20;
+  margin-bottom: $spacer * 100; //TODO remove
 
   @include media-breakpoint-down(md) {
     flex-wrap: wrap;
@@ -123,5 +136,16 @@
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes header-image-animation {
+  0% {
+    opacity: 1;
+  }
+  85%,
+  100% {
+    transform: scale(3);
+    opacity: 0;
   }
 }

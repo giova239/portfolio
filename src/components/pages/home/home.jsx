@@ -6,6 +6,7 @@ function Home() {
   return (
     <>
       <div className="sticky-container">
+        <div className="hero-image"></div>
         <div className="logo-container">
           <h1 className="fs-64 mb-5 text-primary animate-letters animate-letters--left">
             <div className="first-part">S</div>
