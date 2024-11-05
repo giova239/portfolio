@@ -38,12 +38,12 @@ function Header() {
             src={profilepic}
             alt="Profile"
             roundedCircle
-            width="80"
-            height="80"
-            className="me-2"
+            width="70"
+            height="70"
+            className="me-1"
           />
-          <div className="ms-2">
-            <h1 className="fs-26 mb-0">
+          <div className="ms-1">
+            <h1 className="fs-20 mb-0">
               <span className="text-accent1 me-2">Stevanato</span>
               <span className="text-accent2">Giovanni</span>
             </h1>
@@ -51,7 +51,7 @@ function Header() {
           </div>
         </div>
 
-        <div className="flex-grow-1 d-flex justify-content-end">
+        <div className="flex-grow-1 d-none d-md-flex justify-content-end">
           <Image src={logo} alt="Logo" width="70" height="70" />
         </div>
 

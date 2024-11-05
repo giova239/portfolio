@@ -5,7 +5,7 @@ import profilepic from "../../../icons/profilepic.png";
 
 function Home() {
   return (
-    <div className="home">
+    <>
       <div className="sticky-container">
         <div className="logo-container">
           <h1 className="fs-64 mb-5 text-accent1 animate-letters animate-letters--left">
@@ -29,8 +29,8 @@ function Home() {
         <div className="profile-desc__text">
           <p>
             Welcome to my portfolio! My name is{" "}
-            <span className="text-accent2 fw-bold">Giovanni</span> and I am a
-            <span className="text-accent1 fw-bold">
+            <span className="text-accent1 fw-bold">Giovanni</span> and I am a{" "}
+            <span className="text-accent2 fw-bold">
               Bachelor of Computer Science
             </span>{" "}
             from{" "}
@@ -38,7 +38,7 @@ function Home() {
               Ca' Foscari University of Venice
             </span>
             , I am currently working as a{" "}
-            <span className="text-accent1 fw-bold">Full Stack developer</span>{" "}
+            <span className="text-accent2 fw-bold">Full Stack developer</span>{" "}
             at <span className="text-accent3 fw-bold">Alpenite</span>.
           </p>
           <p>
@@ -52,7 +52,7 @@ function Home() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

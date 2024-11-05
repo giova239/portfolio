@@ -5,7 +5,7 @@ import logo from "../../../icons/logo.svg";
 function Footer() {
   return (
     <footer className="bg-dark d-flex flex-wrap justify-content-between align-items-center p-4">
-      <div className="col-md-4 d-flex align-items-center">
+      <div className="col-8 d-flex align-items-center">
         <a href="/" className="mb-3 me-2 mb-md-0 text-decoration-none lh-1">
           <img
             src={logo}
@@ -13,12 +13,12 @@ function Footer() {
             style={{ width: "70px", height: "70px" }}
           />
         </a>
-        <span className="text-accent3 mb-3 mb-md-0">
+        <span className="text-accent3 fs-14 mb-3 mb-md-0">
           © 2024 Giovanni Stevanato
         </span>
       </div>
 
-      <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <ul className="nav col-4 justify-content-end list-unstyled d-flex">
         <li className="ms-3">
           <a className="text-accent1" href="/">
             <FaLinkedin size={24} />
