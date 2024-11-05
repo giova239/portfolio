@@ -6,7 +6,7 @@ import Nav from "react-bootstrap/Nav";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Image from "react-bootstrap/Image";
 import Logo from "../logo/logo";
-import profilepic from "../../../icons/profilepic.png";
+import profilepic from "../../../images/profile.png";
 
 function Header() {
   const [isHidden, setIsHidden] = useState(false);
