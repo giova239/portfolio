@@ -9,7 +9,7 @@ import CardsSection from "./sections/cardsSection";
 
 function UIKit() {
   return (
-    <>
+    <div className="pt-14">
       <h1 className="text-primary">UI Kit</h1>
       <hr />
       <ColorsSection />
@@ -25,7 +25,7 @@ function UIKit() {
       <AlertsSection />
       <hr />
       <CardsSection />
-    </>
+    </div>
   );
 }
 

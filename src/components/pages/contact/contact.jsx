@@ -1,7 +1,11 @@
-import React from 'react';
+import React from "react";
 
-function Home() {
-  return <h1>Contact</h1>;
+function Contact() {
+  return (
+    <div className="pt-14">
+      <h1>Contact</h1>
+    </div>
+  );
 }
 
-export default Home;
+export default Contact;
