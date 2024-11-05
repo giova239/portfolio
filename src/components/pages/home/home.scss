@@ -23,12 +23,12 @@
         width: 0;
         opacity: 0;
         animation: animate-second-part linear forwards;
-        animation-timeline: view(200px 60vh);
+        animation-timeline: view(200px 65vh);
       }
 
       &--right {
         animation: slide-right linear forwards;
-        animation-timeline: view(200px 60vh);
+        animation-timeline: view(200px 65vh);
 
         .first-part {
           z-index: 11;
@@ -41,7 +41,7 @@
 
       &--left {
         animation: slide-left linear forwards;
-        animation-timeline: view(200px 60vh);
+        animation-timeline: view(200px 65vh);
 
         .first-part {
           z-index: 12;
