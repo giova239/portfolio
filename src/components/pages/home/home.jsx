@@ -66,19 +66,23 @@ function Home() {
             Building a Passion for IT
           </p>
           <p>
-            My journey into the world of IT began in high school, where my
-            curiosity for IT quickly grew into a passion. I was fascinated by
-            how programming and networking concepts could bring complex systems
-            to life, and this excitement only intensified as I gained more
-            knowledge.
+            My journey into the world of IT began in high school at{" "}
+            <span className="text-accent1 fw-bold">ITIS Carlo Zuccante</span>,
+            where my curiosity for IT quickly grew into a passion. I was
+            fascinated by how programming and networking concepts could bring
+            complex systems to life, and this excitement only intensified as I
+            gained more knowledge.
           </p>
           <p>
             Driven by this newfound interest, I pursued a Bachelor’s degree in
-            Computer Science at Ca’ Foscari University of Venice, immersing
-            myself in the intricacies of mathematics, software development,
-            algorithms, data structures, and cybersecurity. Each course expanded
-            my understanding, transforming what began as curiosity into a solid
-            technical foundation.
+            Computer Science at{" "}
+            <span className="text-accent2 fw-bold">
+              Ca’ Foscari University of Venice
+            </span>
+            , immersing myself in the intricacies of mathematics, software
+            development, algorithms, data structures, and cybersecurity. Each
+            course expanded my understanding, transforming what began as
+            curiosity into a solid technical foundation.
           </p>
           <p>
             Today, I bring that same curiosity and drive to explore new
@@ -97,17 +101,29 @@ function Home() {
           <p className="text-primary fw-bold fs-26">Starting a Career in IT</p>
           <p>
             After completing my degree, I launched my career as a software
-            developer specializing in Salesforce Commerce Cloud (SFCC) and B2C
-            e-commerce. Beginning as a Front-End Developer, I focused on
-            transforming Figma designs into engaging and user-friendly digital
-            storefronts. Over time, I expanded my skill set to include back-end
-            development, gaining in-depth knowledge of the platform and its
-            extensive customizations.
+            developer specializing in{" "}
+            <span className="text-accent3 fw-bold">
+              Salesforce Commerce Cloud (SFCC)
+            </span>{" "}
+            and <span className="text-accent3 fw-bold">B2C e-commerce</span>.
+            Beginning as a{" "}
+            <span className="text-accent1 fw-bold">Front-End Developer</span>, I
+            focused on transforming Figma designs into engaging and
+            user-friendly digital storefronts. Over time, I expanded my skill
+            set to include{" "}
+            <span className="text-accent2 fw-bold">Back-End Development</span>,
+            gaining in-depth knowledge of the platform and its extensive
+            customizations.
           </p>
           <p>
-            My main focus at Alpenite has been developing e-commerce platforms
-            for luxury high-fashion brand clients as a consultant, which has
-            given me deep, specialized knowledge in the e-commerce field.
+            My main focus at{" "}
+            <span className="text-secondary fw-bold">Alpenite</span> has been
+            developing e-commerce platforms for{" "}
+            <span className="text-accent1 fw-bold">
+              luxury high-fashion brand
+            </span>{" "}
+            clients as a consultant, which has given me deep, specialized
+            knowledge in the e-commerce field.
           </p>
         </div>
       </div>
@@ -120,17 +136,19 @@ function Home() {
         <div className="section-desc__text section-desc__text--left">
           <p className="text-primary fw-bold fs-26">What is next?</p>
           <p>
-            I’m excited to take the next step in my career, whether that’s
-            deepening my experience in e-commerce or exploring entirely new
-            fields with fresh challenges. My background has prepared me to adapt
-            quickly and grow with new technologies and industry trends, so I’m
-            open to roles where I can build on my skills and keep expanding my
-            knowledge.
+            I’m excited to take the{" "}
+            <span className="text-accent1 fw-bold">next step in my career</span>
+            , whether that’s deepening my experience in e-commerce or exploring
+            entirely new fields with fresh challenges. My background has
+            prepared me to adapt quickly and grow with new technologies and
+            industry trends, so I’m open to roles where I can build on my skills
+            and keep expanding my knowledge.
           </p>
           <p>
-            I’m looking forward to stepping into new opportunities, learning
-            along the way, and making a meaningful impact on any team I join.
-            Please feel free to contact me about any new opportunities!
+            I’m looking forward to stepping into{" "}
+            <span className="text-accent2 fw-bold">new opportunities</span>,
+            learning along the way, and making a meaningful impact on any team I
+            join. Please feel free to contact me about any new opportunities!
           </p>
         </div>
       </div>
