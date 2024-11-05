@@ -1,0 +1,126 @@
+@import "../../../bootstrap/bootstrap-custom.scss";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .sticky-container {
+    position: relative;
+    height: $spacer * 50;
+    .logo-container {
+      margin: $spacer * 20 0 $spacer;
+      position: sticky;
+      top: $spacer * 4;
+      z-index: 10;
+
+      .animate-letters {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .first-part {
+          transform: scale(1.7);
+        }
+        .second-part {
+          margin-left: $spacer;
+          overflow: hidden;
+          animation: animate-second-part linear;
+          animation-timeline: scroll();
+        }
+
+        &--right {
+          animation: slide-right linear;
+          animation-timeline: scroll();
+
+          .first-part {
+            z-index: 11;
+            transform-origin: bottom;
+          }
+          .second-part {
+            transform: translateY(-0.75rem);
+          }
+        }
+
+        &--left {
+          animation: slide-left linear;
+          animation-timeline: scroll();
+
+          .first-part {
+            z-index: 12;
+            transform-origin: top;
+          }
+          .second-part {
+            transform: translateY(0.25rem);
+          }
+        }
+      }
+    }
+  }
+
+  .profile-desc {
+    display: flex;
+    gap: $spacer * 2;
+    justify-content: space-evenly;
+    margin-bottom: $spacer * 20;
+
+    @include media-breakpoint-down(md) {
+      flex-wrap: wrap;
+    }
+
+    &__pic {
+      border-radius: 100%;
+      animation: fade-up linear;
+      animation-timeline: scroll();
+    }
+
+    &__text {
+      flex-grow: 1;
+      font-size: 20px;
+      animation: fade-up linear;
+      animation-timeline: scroll();
+    }
+  }
+}
+
+// ----------------------------ANIMATIONS----------------------------
+@keyframes animate-second-part {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 300px;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
