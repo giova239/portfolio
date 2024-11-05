@@ -12,17 +12,23 @@ function Footer() {
 
       <ul className="nav col-4 justify-content-end list-unstyled d-flex">
         <li className="ms-3">
-          <a className="text-accent1" href="/">
+          <a
+            className="text-accent1"
+            href="https://www.linkedin.com/in/stevanatogiovanni/"
+          >
             <FaLinkedin size={24} />
           </a>
         </li>
         <li className="ms-3">
-          <a className="text-accent2" href="/">
+          <a className="text-accent2" href="https://github.com/giova239">
             <FaGithub size={24} />
           </a>
         </li>
         <li className="ms-3">
-          <a className="text-accent3" href="/">
+          <a
+            className="text-accent3"
+            href="https://www.instagram.com/giobba___/"
+          >
             <FaInstagram size={24} />
           </a>
         </li>
