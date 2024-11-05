@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,10 +7,31 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import Image from "react-bootstrap/Image";
 import logo from "../../../icons/logo.svg";
 import profilepic from "../../../icons/profilepic.png";
+import "./header.scss";
 
 function Header() {
+  const [isHidden, setIsHidden] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      setIsHidden(currentScrollPos > prevScrollPos && currentScrollPos > 50);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
   return (
-    <Navbar expand="md" bg="dark" variant="dark" fixed="top" className="p-3">
+    <Navbar
+      expand="md"
+      bg="dark"
+      variant="dark"
+      fixed="top"
+      className={`p-3 ${isHidden ? "header-hidden" : ""}`}
+    >
       <Container className="d-flex justify-content-between align-items-center">
         <div className="d-flex flex-grow align-items-center">
           <Image
