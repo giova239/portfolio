@@ -1,0 +1,8 @@
+// Bootstrap import
+@import "./bootstrap/bootstrap-custom.scss";
+// Components import
+// COMMON
+@import "./components/common/header/header.scss";
+@import "./components/common/logo/logo.scss";
+// PAGES
+@import "./components/pages/home/home.scss";

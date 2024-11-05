@@ -1,5 +1,4 @@
 import React from "react";
-import "./home.scss";
 import Image from "react-bootstrap/Image";
 import profilepic from "../../../icons/profilepic.png";
 
@@ -8,11 +7,11 @@ function Home() {
     <>
       <div className="sticky-container">
         <div className="logo-container">
-          <h1 className="fs-64 mb-5 text-accent1 animate-letters animate-letters--left">
+          <h1 className="fs-64 mb-5 text-primary animate-letters animate-letters--left">
             <div className="first-part">S</div>
             <div className="second-part">tevanato</div>
           </h1>
-          <h1 className="fs-64 mb-5 text-accent2 animate-letters animate-letters--right">
+          <h1 className="fs-64 mb-5 text-secondary animate-letters animate-letters--right">
             <div className="first-part">G</div>
             <div className="second-part">iovanni</div>
           </h1>

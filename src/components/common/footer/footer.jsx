@@ -1,21 +1,13 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
-import logo from "../../../icons/logo.svg";
+import Logo from "../logo/logo";
 
 function Footer() {
   return (
     <footer className="bg-dark d-flex flex-wrap justify-content-between align-items-center p-4">
       <div className="col-8 d-flex align-items-center">
-        <a href="/" className="mb-3 me-2 mb-md-0 text-decoration-none lh-1">
-          <img
-            src={logo}
-            alt="Logo"
-            style={{ width: "70px", height: "70px" }}
-          />
-        </a>
-        <span className="text-accent3 fs-14 mb-3 mb-md-0">
-          © 2024 Giovanni Stevanato
-        </span>
+        <Logo />
+        <span className="fs-14 mb-3 mb-md-0">© 2024 Giovanni Stevanato</span>
       </div>
 
       <ul className="nav col-4 justify-content-end list-unstyled d-flex">

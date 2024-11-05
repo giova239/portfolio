@@ -5,9 +5,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Image from "react-bootstrap/Image";
-import logo from "../../../icons/logo.svg";
+import Logo from "../logo/logo";
 import profilepic from "../../../icons/profilepic.png";
-import "./header.scss";
 
 function Header() {
   const [isHidden, setIsHidden] = useState(false);
@@ -44,15 +43,15 @@ function Header() {
           />
           <div className="ms-1">
             <h1 className="fs-20 mb-0">
-              <span className="text-accent1 me-2">Stevanato</span>
-              <span className="text-accent2">Giovanni</span>
+              <span className="text-primary me-1">Stevanato</span>
+              <span className="text-secondary">Giovanni</span>
             </h1>
-            <h2 className="fs-14 text-accent3">Portfolio</h2>
+            <h2 className="fs-14 text-accent1">Portfolio</h2>
           </div>
         </div>
 
         <div className="flex-grow-1 d-none d-md-flex justify-content-end">
-          <Image src={logo} alt="Logo" width="70" height="70" />
+          <Logo />
         </div>
 
         <Navbar.Toggle aria-controls="offcanvasNavbar-md" />
@@ -69,19 +68,19 @@ function Header() {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link as={Link} to="/">
+              <Nav.Link as={Link} className="text-primary" to="/">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/portfolio">
+              <Nav.Link as={Link} className="text-secondary" to="/portfolio">
                 Portfolio
               </Nav.Link>
-              <Nav.Link as={Link} to="/about">
+              <Nav.Link as={Link} className="text-accent1" to="/about">
                 About
               </Nav.Link>
-              <Nav.Link as={Link} to="/contact">
+              <Nav.Link as={Link} className="text-accent2" to="/contact">
                 Contact
               </Nav.Link>
-              <Nav.Link as={Link} to="/uikit">
+              <Nav.Link as={Link} className="text-accent3" to="/uikit">
                 UI Kit
               </Nav.Link>
             </Nav>

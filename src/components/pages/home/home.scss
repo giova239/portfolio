@@ -1,5 +1,3 @@
-@import "../../../bootstrap/bootstrap-custom.scss";
-
 .sticky-container {
   position: relative;
   height: 100vh;
@@ -11,16 +9,12 @@
     padding-top: 35vh;
     position: sticky;
     top: $spacer * 6;
-    z-index: 10;
 
     .animate-letters {
       display: flex;
       justify-content: center;
       width: 100%;
 
-      .first-part {
-        transform: scale(1.7);
-      }
       .second-part {
         margin-left: $spacer;
         overflow: hidden;
@@ -35,11 +29,11 @@
         animation-timeline: view(200px 65vh);
 
         .first-part {
-          z-index: 11;
           transform-origin: bottom;
+          transform: translateX(1.5rem) scale(1.7);
         }
         .second-part {
-          transform: translateY(-0.75rem);
+          transform: translate(1.5rem, -0.75rem);
         }
       }
 
@@ -48,11 +42,11 @@
         animation-timeline: view(200px 65vh);
 
         .first-part {
-          z-index: 12;
+          transform: translateX(-1.5rem) scale(1.7);
           transform-origin: top;
         }
         .second-part {
-          transform: translateY(0.25rem);
+          transform: translate(-1.5rem, 0.25rem);
         }
       }
     }
@@ -94,6 +88,7 @@
     width: 0;
     opacity: 0;
   }
+  80%,
   100% {
     width: 300px;
     opacity: 1;
@@ -104,6 +99,7 @@
   0% {
     transform: translateX(0);
   }
+  80%,
   100% {
     transform: translateX(-70px);
   }
@@ -113,6 +109,7 @@
   0% {
     transform: translateX(0);
   }
+  80%,
   100% {
     transform: translateX(170px);
   }
