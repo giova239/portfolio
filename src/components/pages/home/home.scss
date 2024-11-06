@@ -3,8 +3,8 @@
   --slide-right-distance: 170px;
 
   @include media-breakpoint-down(md) {
-    --slide-left-distance: 20px;
-    --slide-right-distance: 80px;
+    --slide-left-distance: -20px;
+    --slide-right-distance: 60px;
   }
 }
 
@@ -42,6 +42,7 @@
         margin-left: $spacer;
         overflow: hidden;
         width: 0;
+        max-width: fit-content;
         opacity: 0;
         animation: animate-second-part linear forwards;
         animation-timeline: view(200px 65vh);
@@ -53,10 +54,10 @@
 
         .first-part {
           transform-origin: bottom;
-          transform: translateX(1.5rem) scale(1.7);
+          transform: translateX(3rem) scale(1.7);
         }
         .second-part {
-          transform: translate(1.5rem, -0.75rem);
+          transform: translate(3rem, -0.75rem);
         }
       }
 
@@ -65,12 +66,26 @@
         animation-timeline: view(200px 65vh);
 
         .first-part {
-          transform: translateX(-1.5rem) scale(1.7);
+          transform: translateX(-3rem) scale(1.7);
           transform-origin: top;
         }
         .second-part {
-          transform: translate(-1.5rem, 0.25rem);
+          transform: translate(-3rem, 0.25rem);
         }
+      }
+
+      &--openbracket::before {
+        content: "<";
+        color: map-get($theme-colors, "accent3");
+        z-index: 2;
+        transform: scale(2.5) translate(-$spacer * 2.5, $spacer);
+      }
+
+      &--closebracket::after {
+        content: "/>";
+        color: map-get($theme-colors, "accent3");
+        z-index: 2;
+        transform: scale(2.5) translate($spacer * 2.5, -$spacer * 1.45);
       }
     }
   }
@@ -250,7 +265,7 @@
   0% {
     opacity: 1;
   }
-  60%,
+  70%,
   100% {
     transform: scale(3);
     opacity: 0;

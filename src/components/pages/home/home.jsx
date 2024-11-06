@@ -11,11 +11,11 @@ function Home() {
       <div className="sticky-container">
         <div className="hero-image"></div>
         <div className="logo-container">
-          <h1 className="fs-64 mb-5 text-primary animate-letters animate-letters--left">
+          <h1 className="fs-64 mb-5 text-primary animate-letters animate-letters--left animate-letters--openbracket">
             <div className="first-part">S</div>
             <div className="second-part">tevanato</div>
           </h1>
-          <h1 className="fs-64 mb-5 text-secondary animate-letters animate-letters--right">
+          <h1 className="fs-64 mb-5 text-secondary animate-letters animate-letters--right animate-letters--closebracket">
             <div className="first-part">G</div>
             <div className="second-part">iovanni</div>
           </h1>
