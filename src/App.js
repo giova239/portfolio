@@ -3,9 +3,8 @@ import Header from './components/common/header/header';
 import Footer from './components/common/footer/footer';
 import Home from './components/pages/home/home';
 import Portfolio from './components/pages/portfolio/portfolio';
-import About from './components/pages/about/about';
 import Contact from './components/pages/contact/contact';
-import Uikit from './components/pages/uikit/uikit';
+import About from './components/pages/about/about';
 
 function App() {
   return (
@@ -16,9 +15,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/uikit" element={<Uikit />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
         <Footer />
