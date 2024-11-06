@@ -10,19 +10,31 @@ $body-font-weight: 300;
 $font-size-base: 1rem;
 
 // Custom color palette
+$light: #1f1f1f;
+$dark: #181818;
+$text: #dbeaea;
+$primary: #0553b9;
+$secondary: #497db2;
+$accent1: #8b43d8;
+$accent2: #76c203;
+$accent3: #dba909;
+$success: #778f44;
+$warning: #eacf0e;
+$danger: #a03030;
+$info: #26afcc;
 $theme-colors: (
-  "light": #1f1f1f,
-  "dark": #181818,
-  "primary": #0553b9,
-  "secondary": #497db2,
-  "info": #26afcc,
-  "accent1": #8b43d8,
-  "accent2": #76c203,
-  "accent3": #dba909,
-  "success": #0fb564,
-  "warning": #eacf0e,
-  "danger": #fd0508,
-  "text": #dbeaea,
+  "light": $light,
+  "dark": $dark,
+  "text": $text,
+  "primary": $primary,
+  "secondary": $secondary,
+  "accent1": $accent1,
+  "accent2": $accent2,
+  "accent3": $accent3,
+  "success": $success,
+  "warning": $warning,
+  "danger": $danger,
+  "info": $info,
 );
 // Merge custom theme colors with Bootstrap's default colors
 $theme-colors: map-merge($theme-colors, $theme-colors);
@@ -53,7 +65,26 @@ $spacers: (
 // Merge custom spacers with Bootstrap's default ones
 $spacers: map-merge($spacers, $spacers);
 
-@debug $spacers;
+// Custom form validation style
+$form-feedback-margin-top: $form-text-margin-top;
+$form-feedback-font-size: $form-text-font-size;
+$form-feedback-font-style: $form-text-font-style;
+$form-feedback-valid-color: $success;
+$form-feedback-invalid-color: $danger;
+$form-feedback-icon-valid-color: $form-feedback-valid-color;
+$form-feedback-icon-valid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>");
+$form-feedback-icon-invalid-color: $form-feedback-invalid-color;
+$form-feedback-icon-invalid: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>");
+$form-validation-states: (
+  "valid": (
+    "color": $form-feedback-valid-color,
+    "icon": $form-feedback-icon-valid,
+  ),
+  "invalid": (
+    "color": $form-feedback-invalid-color,
+    "icon": $form-feedback-icon-invalid,
+  ),
+);
 
 // Import remaining Bootstrap SCSS files to apply customizations
 @import "node_modules/bootstrap/scss/bootstrap";
