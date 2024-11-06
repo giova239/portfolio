@@ -26,6 +26,10 @@
   align-items: center;
   border: 1px solid map-get($theme-colors, "text");
 
+  &--error {
+    border: 1px solid map-get($theme-colors, "danger");
+  }
+
   .file-input {
     display: none;
     &-label {
