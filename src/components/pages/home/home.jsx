@@ -32,7 +32,8 @@ function Home() {
         <div className="profile-desc__text">
           <p>
             Welcome to my portfolio! My name is{" "}
-            <span className="text-accent1 fw-bold">Giovanni</span> and I am a{" "}
+            <span className="text-accent1 fw-bold">Giovanni</span>, I am 24, and
+            I am a{" "}
             <span className="text-accent2 fw-bold">
               Bachelor of Computer Science
             </span>{" "}

@@ -10,7 +10,7 @@
 
 .sticky-container {
   position: relative;
-  height: 100vh;
+  height: 150vh;
   margin: 0 (-$spacer * 2) ($spacer);
 
   .hero-image {
@@ -25,7 +25,7 @@
 
     animation: header-image-animation linear forwards;
     animation-timeline: view();
-    animation-range: exit;
+    animation-range: exit -50vh;
   }
 
   .logo-container {
