@@ -7,7 +7,7 @@ function Footer() {
     <footer className="bg-dark d-flex flex-wrap justify-content-between align-items-center p-4">
       <div className="col-8 d-flex align-items-center">
         <Logo />
-        <span className="fs-14 mb-3 mb-md-0">© 2024 Giovanni Stevanato</span>
+        <span className="fs-14 m-3">© 2024 Giovanni Stevanato</span>
       </div>
 
       <ul className="nav col-4 justify-content-end list-unstyled d-flex">

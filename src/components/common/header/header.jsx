@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
@@ -32,27 +32,15 @@ function Header() {
       className={`p-3 ${isHidden ? "header-hidden" : ""}`}
     >
       <Container className="d-flex justify-content-between align-items-center">
-        <div className="d-flex flex-grow align-items-center">
-          <Image
-            src={profilepic}
-            alt="Profile"
-            roundedCircle
-            width="70"
-            height="70"
-            className="me-1"
-          />
-          <div className="ms-1">
-            <h1 className="fs-20 mb-0">
-              <span className="text-primary me-1">Stevanato</span>
-              <span className="text-secondary">Giovanni</span>
-            </h1>
-            <h2 className="fs-14 text-accent1">Portfolio</h2>
-          </div>
-        </div>
-
-        <div className="flex-grow-1 d-none d-md-flex justify-content-end">
-          <Logo />
-        </div>
+        <Image
+          src={profilepic}
+          alt="Profile"
+          roundedCircle
+          width="70"
+          height="70"
+          className="me-3"
+        />
+        <Logo />
 
         <Navbar.Toggle aria-controls="offcanvasNavbar-md" />
 
@@ -68,19 +56,27 @@ function Header() {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link as={Link} className="text-primary" to="/">
+              <Nav.Link as={NavLink} className="nav-link--primary" to="/">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} className="text-secondary" to="/portfolio">
+              <Nav.Link
+                as={NavLink}
+                className="nav-link--secondary"
+                to="/portfolio"
+              >
                 Portfolio
               </Nav.Link>
-              <Nav.Link as={Link} className="text-accent1" to="/about">
+              <Nav.Link as={NavLink} className="nav-link--accent1" to="/about">
                 About
               </Nav.Link>
-              <Nav.Link as={Link} className="text-accent2" to="/contact">
+              <Nav.Link
+                as={NavLink}
+                className="nav-link--accent2"
+                to="/contact"
+              >
                 Contact
               </Nav.Link>
-              <Nav.Link as={Link} className="text-accent3" to="/uikit">
+              <Nav.Link as={NavLink} className="nav-link--accent3" to="/uikit">
                 UI Kit
               </Nav.Link>
             </Nav>
