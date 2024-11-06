@@ -40,8 +40,8 @@ $theme-colors: (
 $theme-colors: map-merge($theme-colors, $theme-colors);
 
 // Other colors overrides
-$body-bg: map-get($theme-colors, "light");
-$body-color: map-get($theme-colors, "text");
+$body-bg: $light;
+$body-color: $text;
 
 // Custom Spacing
 $spacer: 1rem;

@@ -11,13 +11,13 @@
     &--S {
       top: 0;
       left: 0;
-      color: map-get($theme-colors, "primary");
+      color: $primary;
       z-index: 1;
     }
     &--G {
       bottom: 0;
       right: 0;
-      color: map-get($theme-colors, "secondary");
+      color: $secondary;
       z-index: 2;
     }
   }

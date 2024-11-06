@@ -2,7 +2,7 @@
 .form-control,
 .form-select {
   border: none;
-  border-bottom: 1px solid map-get($theme-colors, "text");
+  border-bottom: 1px solid $text;
   border-radius: unset;
   background-color: unset;
 
@@ -13,7 +13,7 @@
   }
 
   & ~ label {
-    color: map-get($theme-colors, "text") !important;
+    color: $text !important;
     &::after {
       background-color: unset !important;
     }
@@ -24,10 +24,10 @@
 .custom-file-input {
   display: flex;
   align-items: center;
-  border: 1px solid map-get($theme-colors, "text");
+  border: 1px solid $text;
 
   &--error {
-    border: 1px solid map-get($theme-colors, "danger");
+    border: 1px solid $danger;
   }
 
   .file-input {

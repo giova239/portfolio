@@ -11,7 +11,7 @@
 .offcanvas {
   .nav-link {
     position: relative;
-    color: map-get($theme-colors, "text");
+    color: $text;
 
     &::after {
       content: "";
@@ -34,50 +34,50 @@
     &--primary {
       &:hover,
       &.active {
-        color: map-get($theme-colors, "primary");
+        color: $primary;
 
         &::after {
-          background-color: map-get($theme-colors, "primary");
+          background-color: $primary;
         }
       }
     }
     &--secondary {
       &:hover,
       &.active {
-        color: map-get($theme-colors, "secondary");
+        color: $secondary;
 
         &::after {
-          background-color: map-get($theme-colors, "secondary");
+          background-color: $secondary;
         }
       }
     }
     &--accent1 {
       &:hover,
       &.active {
-        color: map-get($theme-colors, "accent1");
+        color: $accent1;
 
         &::after {
-          background-color: map-get($theme-colors, "accent1");
+          background-color: $accent1;
         }
       }
     }
     &--accent2 {
       &:hover,
       &.active {
-        color: map-get($theme-colors, "accent2");
+        color: $accent2;
 
         &::after {
-          background-color: map-get($theme-colors, "accent2");
+          background-color: $accent2;
         }
       }
     }
     &--accent3 {
       &:hover,
       &.active {
-        color: map-get($theme-colors, "accent3");
+        color: $accent3;
 
         &::after {
-          background-color: map-get($theme-colors, "accent3");
+          background-color: $accent3;
         }
       }
     }

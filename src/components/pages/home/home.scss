@@ -77,14 +77,14 @@
 
       &--openbracket::before {
         content: "<";
-        color: map-get($theme-colors, "accent3");
+        color: $accent3;
         z-index: 2;
         transform: scale(2.5) translate(-$spacer * 2.5, $spacer);
       }
 
       &--closebracket::after {
         content: "/>";
-        color: map-get($theme-colors, "accent3");
+        color: $accent3;
         z-index: 2;
         transform: scale(2.5) translate($spacer * 2.5, -$spacer * 1.45);
       }
