@@ -71,7 +71,11 @@ function Header() {
               >
                 Contact
               </Nav.Link>
-              <Nav.Link as={NavLink} className="nav-link--primary" to="/about">
+              <Nav.Link
+                as={NavLink}
+                className="nav-link--secondary"
+                to="/about"
+              >
                 About
               </Nav.Link>
             </Nav>
