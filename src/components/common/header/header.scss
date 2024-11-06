@@ -5,10 +5,13 @@
   &.header-hidden {
     transform: translateY(-100%);
   }
+}
 
-  // DESKTOP NAV LINK
+.navbar,
+.offcanvas {
   .nav-link {
     position: relative;
+    color: map-get($theme-colors, "text");
 
     &::after {
       content: "";
