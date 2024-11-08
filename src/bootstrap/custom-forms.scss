@@ -6,6 +6,12 @@
   border-radius: unset;
   background-color: unset;
 
+  &[required] ~ label::after {
+    position: absolute;
+    content: "*";
+    left: 0;
+  }
+
   &:focus {
     background-color: unset;
     border-bottom-color: $primary !important;
