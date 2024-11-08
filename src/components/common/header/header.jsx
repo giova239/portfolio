@@ -55,28 +55,28 @@ function Header() {
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
               <Nav.Link as={NavLink} className="nav-link--accent1" to="/">
-                Home
+                <div className="nav-link__text">Home</div>
               </Nav.Link>
               <Nav.Link
                 as={NavLink}
                 className="nav-link--accent2"
                 to="/portfolio"
               >
-                Portfolio
+                <div className="nav-link__text">Portfolio</div>
               </Nav.Link>
               <Nav.Link
                 as={NavLink}
                 className="nav-link--accent3"
                 to="/contact"
               >
-                Contact
+                <div className="nav-link__text">Contact</div>
               </Nav.Link>
               <Nav.Link
                 as={NavLink}
                 className="nav-link--secondary"
                 to="/about"
               >
-                About
+                <div className="nav-link__text">About</div>
               </Nav.Link>
             </Nav>
           </Offcanvas.Body>

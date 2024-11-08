@@ -7,27 +7,56 @@
   }
 }
 
-.navbar,
-.offcanvas {
+.navbar {
   .nav-link {
     position: relative;
     color: $text;
+    transition: color 0.4s ease-in;
 
     &::after {
       content: "";
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+      bottom: $spacer * 0.25;
+      left: 10%;
+      width: 77%;
       height: 2px;
       background-color: currentColor;
       transform-origin: center;
       transform: scaleX(0);
+
+      @include media-breakpoint-down(md) {
+        left: 0;
+        transform-origin: left;
+      }
     }
 
-    &:hover::after,
-    &.active::after {
-      animation: 0.3s ease-out forwards show-nav-underline;
+    &:hover,
+    &.active {
+      &::after {
+        animation: 0.3s ease-in 0.1s forwards show-nav-underline;
+      }
+      .nav-link__text {
+        &::before,
+        &::after {
+          animation: 0.4s ease-out forwards hide-angle-brackets;
+        }
+      }
+    }
+
+    &__text {
+      &::before {
+        content: "< ";
+        padding-right: $spacer * 0.25;
+        transform-origin: right;
+        display: inline-block;
+      }
+
+      &::after {
+        content: " />";
+        padding-left: $spacer * 0.25;
+        transform-origin: left;
+        display: inline-block;
+      }
     }
 
     // Variant classes for colors
@@ -35,9 +64,16 @@
       &:hover,
       &.active {
         color: $primary;
+        transition: color 0.3s ease-out;
 
         &::after {
           background-color: $primary;
+        }
+      }
+      .nav-link__text {
+        &::before,
+        &::after {
+          color: $secondary;
         }
       }
     }
@@ -45,9 +81,16 @@
       &:hover,
       &.active {
         color: $secondary;
+        transition: color 0.3s ease-out;
 
         &::after {
           background-color: $secondary;
+        }
+      }
+      .nav-link__text {
+        &::before,
+        &::after {
+          color: $secondary;
         }
       }
     }
@@ -55,9 +98,16 @@
       &:hover,
       &.active {
         color: $accent1;
+        transition: color 0.3s ease-out;
 
         &::after {
           background-color: $accent1;
+        }
+      }
+      .nav-link__text {
+        &::before,
+        &::after {
+          color: $accent1;
         }
       }
     }
@@ -65,9 +115,16 @@
       &:hover,
       &.active {
         color: $accent2;
+        transition: color 0.3s ease-out;
 
         &::after {
           background-color: $accent2;
+        }
+      }
+      .nav-link__text {
+        &::before,
+        &::after {
+          color: $accent2;
         }
       }
     }
@@ -75,9 +132,16 @@
       &:hover,
       &.active {
         color: $accent3;
+        transition: color 0.3s ease-out;
 
         &::after {
           background-color: $accent3;
+        }
+      }
+      .nav-link__text {
+        &::before,
+        &::after {
+          color: $accent3;
         }
       }
     }
@@ -91,5 +155,16 @@
   }
   100% {
     transform: scaleX(1);
+  }
+}
+
+@keyframes hide-angle-brackets {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
   }
 }
