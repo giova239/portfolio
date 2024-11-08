@@ -86,6 +86,11 @@ $form-validation-states: (
   ),
 );
 
+// Custom button border radius
+$btn-border-radius: 0 !important;
+$btn-border-radius-sm: 0 !important;
+$btn-border-radius-lg: 0 !important;
+
 // Import remaining Bootstrap SCSS files to apply customizations
 @import "node_modules/bootstrap/scss/bootstrap";
 
