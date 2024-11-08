@@ -133,9 +133,9 @@
   }
 
   &__pic {
-    flex: 0 0 40%;
-    width: 40%;
-    aspect-ratio: 3/4;
+    flex: 0 0 60%;
+    width: 60%;
+    aspect-ratio: 4/3;
     object-fit: cover;
     opacity: 0;
     animation: fade-in-from-bottom linear forwards;
@@ -154,6 +154,12 @@
       animation-range: entry;
     }
 
+    @include media-breakpoint-down(lg) {
+      flex: 0 0 50%;
+      width: 50%;
+      aspect-ratio: 3/4;
+    }
+
     @include media-breakpoint-down(md) {
       flex: 0 0 100%;
       width: 100%;
@@ -161,8 +167,8 @@
   }
 
   &__text {
-    flex: 0 0 30%;
-    width: 30%;
+    flex: 0 0 40%;
+    width: 40%;
     font-size: 20px;
     opacity: 0;
     animation: fade-in-from-bottom linear forwards;
@@ -179,6 +185,11 @@
       animation: fade-in-from-left linear forwards;
       animation-timeline: view();
       animation-range: entry;
+    }
+
+    @include media-breakpoint-down(lg) {
+      flex: 0 0 50%;
+      width: 50%;
     }
 
     @include media-breakpoint-down(md) {
