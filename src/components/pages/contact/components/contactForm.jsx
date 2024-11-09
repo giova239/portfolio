@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Row, Col } from "react-bootstrap";
 
 function ContactForm() {
   const [validated, setValidated] = useState(false);
@@ -47,30 +47,35 @@ function ContactForm() {
       {/* Disclaimer for required fields */}
       <p className="fs-12 text-end">* required fields</p>
 
-      {/* Name Input */}
-      <Form.Group controlId="formName" className="mt-3">
-        <Form.Floating>
-          <Form.Control type="text" placeholder=" " required />
-          <Form.Label>Name</Form.Label>
-          <Form.Control.Feedback type="invalid">
-            Please provide your name.
-          </Form.Control.Feedback>
-        </Form.Floating>
-      </Form.Group>
-
-      {/* Surname Input */}
-      <Form.Group controlId="formSurname" className="mt-3">
-        <Form.Floating>
-          <Form.Control type="text" placeholder=" " required />
-          <Form.Label>Surname</Form.Label>
-          <Form.Control.Feedback type="invalid">
-            Please provide your surname.
-          </Form.Control.Feedback>
-        </Form.Floating>
-      </Form.Group>
+      <Row>
+        <Col md={6}>
+          {/* Name Input */}
+          <Form.Group controlId="formName" className="mt-4">
+            <Form.Floating>
+              <Form.Control type="text" placeholder=" " required />
+              <Form.Label>Name</Form.Label>
+              <Form.Control.Feedback type="invalid">
+                Please provide your name.
+              </Form.Control.Feedback>
+            </Form.Floating>
+          </Form.Group>
+        </Col>
+        <Col md={6}>
+          {/* Surname Input */}
+          <Form.Group controlId="formSurname" className="mt-4">
+            <Form.Floating>
+              <Form.Control type="text" placeholder=" " required />
+              <Form.Label>Surname</Form.Label>
+              <Form.Control.Feedback type="invalid">
+                Please provide your surname.
+              </Form.Control.Feedback>
+            </Form.Floating>
+          </Form.Group>
+        </Col>
+      </Row>
 
       {/* Email Input */}
-      <Form.Group controlId="formEmail" className="mt-3">
+      <Form.Group controlId="formEmail" className="mt-4">
         <Form.Floating>
           <Form.Control type="email" placeholder=" " required />
           <Form.Label>Email</Form.Label>
@@ -81,7 +86,7 @@ function ContactForm() {
       </Form.Group>
 
       {/* Phone Input */}
-      <Form.Group controlId="formPhone" className="mt-3">
+      <Form.Group controlId="formPhone" className="mt-4">
         <Form.Floating>
           <Form.Control
             type="tel"
@@ -97,7 +102,7 @@ function ContactForm() {
       </Form.Group>
 
       {/* Reason for Contact Select */}
-      <Form.Group controlId="formReason" className="mt-3">
+      <Form.Group controlId="formReason" className="mt-6">
         <Form.Floating>
           <Form.Select required>
             <option value="">Choose a reason...</option>
@@ -113,7 +118,7 @@ function ContactForm() {
       </Form.Group>
 
       {/* Message Textarea */}
-      <Form.Group controlId="formMessage" className="mt-3">
+      <Form.Group controlId="formMessage" className="mt-6">
         <Form.Floating>
           <Form.Control
             as="textarea"
@@ -129,7 +134,7 @@ function ContactForm() {
       </Form.Group>
 
       {/* Optional File Input */}
-      <Form.Group controlId="formFile" className="mt-3 position-relative">
+      <Form.Group controlId="formFile" className="mt-6 position-relative">
         <Form.Label>File Input</Form.Label>
         <div
           className={`custom-file-input ${
@@ -156,7 +161,7 @@ function ContactForm() {
       </Form.Group>
 
       {/* Mandatory checkbox */}
-      <Form.Group controlId="formOptions" className="mt-3">
+      <Form.Group controlId="formOptions" className="mt-6">
         <Form.Check
           type="checkbox"
           id="checkboxMandatory"
@@ -165,10 +170,19 @@ function ContactForm() {
         />
       </Form.Group>
 
-      {/* Submit Button */}
-      <Button variant="primary" className="mt-3" type="submit">
-        Submit
-      </Button>
+      {/* Buttons */}
+      <Row className="mt-6">
+        <Col md={6}>
+          <Button type="reset" variant="outline-danger" className="w-100 mb-2">
+            Reset
+          </Button>
+        </Col>
+        <Col md={6}>
+          <Button type="submit" variant="success" className="w-100">
+            Submit
+          </Button>
+        </Col>
+      </Row>
     </Form>
   );
 }
