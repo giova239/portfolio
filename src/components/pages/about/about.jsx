@@ -18,17 +18,17 @@ function About() {
       <hr />
       <ColorsSection />
       <hr />
-      <SpacersSection />
-      <hr />
       <FormsSection />
+      <hr />
+      <SpacersSection />
       <hr />
       <ButtonsSection />
       <hr />
       <ModalsSection />
       <hr />
-      <AlertsSection />
-      <hr />
       <CardsSection />
+      <hr />
+      <AlertsSection />
     </div>
   );
 }

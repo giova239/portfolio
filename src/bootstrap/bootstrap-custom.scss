@@ -86,10 +86,15 @@ $form-validation-states: (
   ),
 );
 
-// Custom button border radius
-$btn-border-radius: 0 !important;
-$btn-border-radius-sm: 0 !important;
-$btn-border-radius-lg: 0 !important;
+// Custom Buttons
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
+// Custom Cards
+$card-border-width: 0;
+$card-border-radius: 0;
+$card-inner-border-radius: 0;
 
 // Import remaining Bootstrap SCSS files to apply customizations
 @import "node_modules/bootstrap/scss/bootstrap";
