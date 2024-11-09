@@ -10,12 +10,10 @@ function ColorsSection() {
   const renderColorBlock = (color) => (
     <div key={color} className="d-flex align-items-center mb-3">
       <div
-        className={`bg-${color} d-inline-block me-2`}
+        className={`bg-${color} d-inline-block me-2 shadow`}
         style={{
           width: "100px",
           height: "100px",
-          boxShadow:
-            "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
         }}
       ></div>
       <span>→{color.charAt(0).toUpperCase() + color.slice(1)}</span>
