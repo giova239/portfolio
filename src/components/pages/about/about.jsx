@@ -12,7 +12,20 @@ function About() {
     <div className="pt-14">
       {/* ABOUT */}
       <h1 className="text-primary">About</h1>
-      <p>This site was Made with React and Bootstrap</p>
+      <p>This site was Made with:</p>
+      <ul>
+        <li>React (https://18.react.dev/learn): with Javascript</li>
+        <li>
+          Bootstrap
+          (https://getbootstrap.com/docs/5.3/getting-started/introduction/):
+          customized via scss
+        </li>
+        <li>
+          react-bootstrap
+          (https://react-bootstrap.netlify.app/docs/getting-started/introduction):
+          a reimplementation of bootstrap using react instead of jquery
+        </li>
+      </ul>
       {/* UI KIT */}
       <h1 className="text-primary">UI Kit</h1>
       <hr />
